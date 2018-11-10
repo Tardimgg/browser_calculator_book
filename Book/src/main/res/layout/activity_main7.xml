@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.myapplication.ScreenPager
+    xmlns:a="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    a:layout_width="match_parent"
+    a:layout_height="match_parent"
+    a:id = "@+id/view7">
+
+    <ScrollView
+        a:layout_width="match_parent"
+        a:layout_height="match_parent"
+        a:background="@color/colorBackground">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="10dp"
+            android:id = "@+id/view7_0"
+            android:background="@color/colorScroll">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/view7_0_text0"
+                android:textSize="25sp"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/view7_0_text1"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colororange">
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp">
+
+                    <TextView
+                        android:id = "@+id/textView"
+                        android:text="@string/view7_0_text2"
+                        android:textSize="18sp"
+                        android:layout_margin="2dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/color_white_black"
+                        android:textIsSelectable="true"/>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id = "@+id/q1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id = "@+id/view7_1"
+                android:layout_gravity="top">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view7_1_text0"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:textSize="20sp"/>
+
+                <EditText
+                    android:id = "@+id/edittext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:inputType="text"
+                    android:minWidth="25dp"
+                    android:layout_gravity="center"
+                    android:textSize="18sp" />
+
+
+            </LinearLayout>
+         </ScrollView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/view6_4">
+
+                <Button
+                    android:id="@+id/button18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick"
+                    android:background="@drawable/back"
+                    android:textSize="17sp"
+                    android:layout_gravity="right"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="@string/answer_check"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="7dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+    <ScrollView
+        a:layout_width="match_parent"
+        a:layout_height="match_parent"
+        a:background="@color/colorBackground">
+
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:background="@color/colorScroll"
+            android:id = "@+id/view7_3">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/view7_2_text0"
+                android:textSize="25sp"
+                android:layout_marginTop="8dp"/>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/view7_2_text1"
+                android:layout_marginBottom="10dp"
+                android:paddingBottom="5dp"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </ScrollView>
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackground">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id = "@+id/q"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="top"
+                android:id = "@+id/view7_4">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/view7_3_text0"
+                    android:textSize="20sp"
+                    android:layout_marginTop="8dp" />
+
+                <Button
+                    android:id="@+id/button14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view7_3_text1"
+                    android:textSize="17sp"
+                    android:layout_marginTop="25dp"
+                    android:background="@drawable/back"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:onClick = "onClick5" />
+
+                <Button
+                    android:id="@+id/button13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/view7_3_text2"
+                    android:textSize="17sp"
+                    android:onClick = "onClick8"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/back" />
+
+                <Button
+                    android:id="@+id/button15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick7"
+                    android:text="@string/view7_3_text3"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/back" />
+
+                <Button
+                    android:id="@+id/button16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick6"
+                    android:text="@string/view7_3_text4"
+                    android:textSize="17sp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/back" />
+
+            </LinearLayout>
+        </ScrollView>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/view7_5">
+
+                <Button
+                    android:id="@+id/button17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onClick9"
+                    android:background="@drawable/back"
+                    android:textSize="17sp"
+                    android:layout_gravity="right"
+                    android:text="@string/view_next"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="7dp"/>
+            </LinearLayout>
+        </ScrollView>
+    </android.support.constraint.ConstraintLayout>
+</com.example.myapplication.ScreenPager>

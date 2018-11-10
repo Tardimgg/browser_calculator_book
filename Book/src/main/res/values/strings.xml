@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">Java Tutorial</string>
+    <string name="menu_item1">Задать вопрос</string>
+    <string name="menu_item2">Изменить размер шрифта</string>
+    <string name="menu_item3">Размер шрифта по умолчанию</string>
+    <string name="menu_item4">Документация (Английский)</string>
+    <string name="view_next">Далее</string>
+    <string name="answer_check">Проверить</string>
+    <string name="view6_0_text0">Добро пожаловать в мир Java!</string>
+    <string name="view6_0_text1">Java - сильно типизированный объектно-ориентированный язык программирования, разработанный компанией Sun Microsystems (в последующем приобретённой компанией Oracle). Приложения Java обычно транслируются в специальный байт-код, поэтому они могут работать на любой компьютерной архитектуре, с помощью виртуальной Java-машины, что значит, что вам необходимо написать программу один раз, чтобы запустить её на множестве различных платформ. Дата официального выпуска — 23 мая 1995 года.</string>
+    <string name="view6_1_text0">Язык программирования Java разработала компания</string>
+    <string name="view6_1_text1">Microsoft</string>
+    <string name="view6_1_text2">Oracle</string>
+    <string name="view6_1_text3">Sun Microsystems</string>
+    <string name="view6_1_text4">Apple</string>
+    <string name="view6_2_text0">Java</string>
+    <string name="view6_2_text1">Язык Java активно используется для создания мобильных приложений под операционную систему Android. При этом программы компилируются в нестандартный байт-код, для использования их виртуальной машиной Dalvik (начиная с Android 5.0 Lollipop виртуальная машина заменена на ART). Для такой компиляции используется дополнительный инструмент, а именно Android SDK (Software Development Kit), разработанный компанией Google.</string>
+    <string name="view6_3_text0">Язык программирования Java активно используется для разработки приложений под операционную систему</string>
+    <string name="view6_3_text1">Ios</string>
+    <string name="view6_3_text2">Android</string>
+    <string name="view6_3_text3">Windows Phone</string>
+    <string name="view6_3_text4">Symbian</string>
+    <string name="view7_0_text0">Первая программа на языке Java.</string>
+    <string name="view7_0_text1">Давайте начнем с создания первой программы. Она будет выводить на экран текст \"Hello World\". В Java каждая строка кода должна быть внутри класса. В нашем примере, мы назвали класс \"s\". В Java каждое приложение имеет точку старта. Точкой старта является метод \"main\".</string>
+    <string name="view7_0_text2">public class s{\n \u0020\u0020\u0020\u0020 public static void main (String [ ] args){\n \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 System.out.println(\"Hello world!\")\n \u0020\u0020\u0020\u0020}\n}</string>
+    <string name="view7_1_text0">Какой метод является точкой старта Java программы</string>
+    <string name="view7_2_text0">Определение выражений в Java</string>
+    <string name="view7_2_text1">В Java каждое выражение должно заканчиватсья \";\". Однако, \";\" не следует использовать после объявлений методов, классов, циклов, после которых следует определение тела при помощи фигурных скобок \"{\" и \"}\".</string>
+    <string name="view7_3_text0">Чем нужно выделять определение класса в Java программе?</string>
+    <string name="view7_3_text1">\".\"</string>
+    <string name="view7_3_text2">\"{\" и \"}\"</string>
+    <string name="view7_3_text3">\",\"</string>
+    <string name="view7_3_text4">\";\"</string>
+    <string name="view8_0_text0">Переменные в Java</string>
+    <string name="view8_0_text1">Переменные хранят данные для обработки. Они имеют уникальное имя и могут быть разных типов. Наиболее часто встречаются такие типы как:\n -int: используется для хранения и использования чисел от -2147483648 до 2147483647 и имеют размер равный 32 бит.\n -String: используется для хранения и использования текста. Не имеют ограничений в размере текста.</string>
+    <string name="view8_1_text0">Какой тип данных нужно использовать для хранения целого числа?</string>
+    <string name="view8_1_text1">String</string>
+    <string name="view8_1_text2">int</string>
+    <string name="view8_1_text3">whole</string>
+    <string name="view8_1_text4">number</string>
+    <string name="view8_2_text0">Переменные</string>
+    <string name="view8_2_text1">Также в Java существуют следующие типы:\n- float: используется для хранения и использования чисел с плавающей точкой или действительных чисел от -1.4e-45f до 3.4e+38f и имеют размер равный 32 бит.\n- long: используется для хранения и использования целых чисел в большем диапозоне чем в типе int от -9223372036854775808 до 9223372036854775807 и имеют размер равный 64 бит.\n- double: используется для хранения и использования чисел с плавающей точкой или действительных чисел с двойной точностью от -4.9e-324 до 1.7e+308 и имеют размер равный 64 бит.\n- boolean: используется для хранения и использования логических значений. Может иметь значение true или false и имеют размер равный 8 бит в массивах и 32 бит не в массивах (не в массивах используется int)\n- char: используются для хранения и использования одного символа и имеют размер равный 16 бит.</string>
+    <string name="view8_3_text0">Какой тип данных может принимать только два значения</string>
+    <string name="view8_3_text1">boolean</string>
+    <string name="view8_3_text2">double</string>
+    <string name="view8_3_text3">float</string>
+    <string name="view8_3_text4">two</string>
+    <string name="view8_4_text0">Объявление переменных на языке Java</string>
+    <string name="view8_4_text1">Для того, чтобы объявить переменную необходимо прописать тип переменной далее указать имя. После \"=\". Далее необходимо указать значение переменной. Значение переменной типа String указывается в двойных кавычках. Дробная часть чисел типа double и float отделяется от целой точкой. В конце дробной части чисел типа float ставиться \"f\" или \"F\". Значение переменной типа boolean пишется с прописной буквы. Значение переменной типа char указываются в одинарных кавычках.\nПример:</string>
+    <string name="view8_4_text2">public class s{\n \u0020\u0020\u0020\u0020 public static void main (String [ ] args){\n \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 int a = 5;\n \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 float b = 5.2f;\n \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 String c = \"3e8u\";\n \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 double e = 5.3;\n \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 boolean r = true;\n \u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020 char f = \'h\'\n \u0020\u0020\u0020\u0020}\n}</string>
+    <string name="view8_5_text0">Какая ошибка в следующем выражении или есть ли она вообще?\nfloat s = 5.3;</string>
+    <string name="view8_5_text1">Нужна \",\" вместо \".\"</string>
+    <string name="view8_5_text2">Нет ошибки</string>
+    <string name="view8_5_text3">Нужно после дробной части поставить \"f\" или \"F\"</string>
+    <string name="view8_5_text4">Нужно убрать \";\"</string>
+</resources>
