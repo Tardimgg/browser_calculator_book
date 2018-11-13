@@ -3,13 +3,22 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/001 1Project/001 1Project.iml" filepath="$PROJECT_DIR$/001 1Project/001 1Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/001 1Project/001 1Project.iml" filepath="$PROJECT_DIR$/001 1Project/001 1Project.iml" />
       <module fileurl="file://$PROJECT_DIR$/002BasicViews/002BasicViews.iml" filepath="$PROJECT_DIR$/002BasicViews/002BasicViews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/002BasicViews/002BasicViews.iml" filepath="$PROJECT_DIR$/002BasicViews/002BasicViews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Book/Book.iml" filepath="$PROJECT_DIR$/Book/Book.iml" />
       <module fileurl="file://$PROJECT_DIR$/Book/Book.iml" filepath="$PROJECT_DIR$/Book/Book.iml" />
       <module fileurl="file://$PROJECT_DIR$/MyApplication1.iml" filepath="$PROJECT_DIR$/MyApplication1.iml" />
       <module fileurl="file://$PROJECT_DIR$/Textbook/Textbook.iml" filepath="$PROJECT_DIR$/Textbook/Textbook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Textbook/Textbook.iml" filepath="$PROJECT_DIR$/Textbook/Textbook.iml" />
+      <module fileurl="file://$PROJECT_DIR$/abc/abc.iml" filepath="$PROJECT_DIR$/abc/abc.iml" />
       <module fileurl="file://$PROJECT_DIR$/abc/abc.iml" filepath="$PROJECT_DIR$/abc/abc.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/browser_calculator_book_NEW.iml" filepath="$PROJECT_DIR$/.idea/browser_calculator_book_NEW.iml" />
       <module fileurl="file://$PROJECT_DIR$/myapplication2/myapplication2.iml" filepath="$PROJECT_DIR$/myapplication2/myapplication2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myapplication2/myapplication2.iml" filepath="$PROJECT_DIR$/myapplication2/myapplication2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/textbook2/textbook2.iml" filepath="$PROJECT_DIR$/textbook2/textbook2.iml" />
       <module fileurl="file://$PROJECT_DIR$/textbook2/textbook2.iml" filepath="$PROJECT_DIR$/textbook2/textbook2.iml" />
     </modules>
   </component>

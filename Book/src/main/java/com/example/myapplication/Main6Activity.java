@@ -24,8 +24,6 @@ import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-
-
 public class Main6Activity extends AppCompatActivity {
 
     private boolean check = false;

@@ -94,16 +94,16 @@ public class Main3Activity extends Activity implements View.OnTouchListener{
                 }
                 break;
             case MotionEvent.ACTION_MOVE: // движение
-               break;
+                break;
             case MotionEvent.ACTION_UP: // отпускание
                 Uri address = Uri.parse("https://play.google.com/store/apps/details?id=com.duy.compiler.javanide&hl=ru");
                 Intent intent = new Intent(Intent.ACTION_VIEW, address);
                 startActivity(intent);
-               //ImageView image = (ImageView) findViewById(R.id.imageView2);
-               //ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) image.getLayoutParams();
-               //params.height =  height_touch;
-               //params.width = width_touch;
-               //image.setLayoutParams(params);
+                //ImageView image = (ImageView) findViewById(R.id.imageView2);
+                //ConstraintLayout.LayoutParams params = (ConstraintLayout.LayoutParams) image.getLayoutParams();
+                //params.height =  height_touch;
+                //params.width = width_touch;
+                //image.setLayoutParams(params);
                 check_touch = false;
                 break;
         }
