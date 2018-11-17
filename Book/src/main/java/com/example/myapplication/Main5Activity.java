@@ -226,6 +226,7 @@ public class Main5Activity extends AppCompatActivity implements View.OnTouchList
         return true;
     }
 
+    @Override
     public void onBackPressed() {
         back();
     }

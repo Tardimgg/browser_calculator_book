@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 public class admin extends Activity {
     private int old_view = base.output_admin_old_view();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,14 +27,17 @@ public class admin extends Activity {
             Intent intent = new Intent(this, method.class);
             startActivity(intent);
             finish();
-        }else{
+        } else {
             TextView textView = (TextView) findViewById(R.id.textView9);
             textView.setText("Неправильно");
         }
     }
-    public void onBackPressed(){
+
+    @Override
+    public void onBackPressed() {
         back();
     }
+
     private void back() {
         Intent intent = new Intent(this, old_view == 0 ? Main0Activity.class : MainActivity.class);
         startActivity(intent);

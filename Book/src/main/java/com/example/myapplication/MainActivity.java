@@ -47,7 +47,8 @@ public class MainActivity extends Activity {
                 });
             }
 
-        } catch (Exception e) {}
+        } catch (Exception e) {
+        }
     }
 
     private int writer() throws Exception {
@@ -74,22 +75,26 @@ public class MainActivity extends Activity {
         base.input_window(1);
         base.input_method(1);
         base.input_default_settings(true);
-        base.input_default_fout(true);
+        base.input_default_font(true);
         base.input_restart(true);
         Intent x = new Intent(this, method.class);
         startActivity(x);
         finish();
     }
+
     public void onClick3(View view) {
         base.input_admin_old_view(1);
         Intent intent = new Intent(this, admin.class);
         startActivity(intent);
         finish();
     }
-    public void onBackPressed(){
+
+    @Override
+    public void onBackPressed() {
         back();
     }
-    private void back(){
+
+    private void back() {
         LayoutInflater li = LayoutInflater.from(this);
         final View promptsView = li.inflate(R.layout.activity_exit, null);
         AlertDialog.Builder quitDialog = new AlertDialog.Builder(MainActivity.this);

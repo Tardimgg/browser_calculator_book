@@ -15,15 +15,15 @@ import android.widget.Checkable;
 import android.widget.TextView;
 
 
-public class Main0Activity extends Activity{
+public class Main0Activity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (base.output_default_settings()){
+        if (base.output_default_settings()) {
             base.input_check(false);
             base.input_default_settings(false);
         }
-        if (base.output_check()){
+        if (base.output_check()) {
             base.input_check(false);
             Intent intent = new Intent(this, Main3Activity.class);
             startActivity(intent);
@@ -34,35 +34,42 @@ public class Main0Activity extends Activity{
         Button button = (Button) findViewById(R.id.button);
         button.setEnabled(x.isChecked());
     }
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
     }
+
     public void onClick(View view) {
         CheckBox x = (CheckBox) findViewById(R.id.checkBox);
         Button button = (Button) findViewById(R.id.button);
         button.setEnabled(x.isChecked());
     }
+
     public void onClick1(View view) {
         try {
             write();
-        }catch (Exception e){}
+        } catch (Exception e) {
+        }
         Intent intent = new Intent(this, method.class);
         startActivity(intent);
         finish();
     }
+
     public void onClick2(View view) {
         Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
         finish();
     }
+
     public void onClick3(View view) {
         base.input_admin_old_view(0);
         Intent intent = new Intent(this, admin.class);
         startActivity(intent);
         finish();
     }
-    private void write()throws Exception{
+
+    private void write() throws Exception {
         if (!base.output_check()) {
             base.input_check(false);
             base.input_method(1);
@@ -71,10 +78,13 @@ public class Main0Activity extends Activity{
             base.input_restart(true);
         }
     }
-    public void onBackPressed(){
+
+    @Override
+    public void onBackPressed() {
         back();
     }
-    private void back(){
+
+    private void back() {
         LayoutInflater li = LayoutInflater.from(this);
         final View promptsView = li.inflate(R.layout.activity_exit, null);
         AlertDialog.Builder quitDialog = new AlertDialog.Builder(Main0Activity.this);

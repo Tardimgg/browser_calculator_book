@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:a="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:a="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     a:layout_height="match_parent"
-    a:layout_width = "match_parent"
-    a:id = "@+id/view5_scroll">
-    <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    a:layout_width="match_parent"
+    a:id="@+id/view5_scroll">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id = "@+id/view5"
+        android:id="@+id/view5"
         tools:context="com.example.myapplication.Main5Activity">
 
         <Button

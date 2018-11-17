@@ -77,7 +77,7 @@ public class Main7Activity extends AppCompatActivity {
                                         //Вводим текст и отображаем в строке ввода на основном экране:
                                         if (checkBox.isChecked()) {
                                             saved_box();
-                                        }else{
+                                        } else {
                                             base.input_check(false);
                                             float size = (float) base.output_progress_size();
                                             if (size != 0.0f) {
@@ -95,7 +95,7 @@ public class Main7Activity extends AppCompatActivity {
                         .setNegativeButton("Нет",
                                 new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
-                                        if (checkBox.isChecked()){
+                                        if (checkBox.isChecked()) {
                                             base.input_check_box_size(true);
                                             saved_box();
                                         }
@@ -106,9 +106,9 @@ public class Main7Activity extends AppCompatActivity {
 
                 //и отображаем его:
                 mDialogBuilder.show();
-            }else if (size != 18 && !base.output_check_box_size()){
+            } else if (size != 18 && !base.output_check_box_size()) {
                 base.input_check(false);
-            }else if (base.output_check_box_size()){
+            } else if (base.output_check_box_size()) {
                 base.input_check_box_size(false);
             }
 
@@ -138,7 +138,8 @@ public class Main7Activity extends AppCompatActivity {
             });
         }
     }
-    public void saved_box(){
+
+    public void saved_box() {
         base.input_window(6);
         base.input_progress_boolean(true);
         base.input_method_check_box(1);
@@ -146,11 +147,13 @@ public class Main7Activity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
     }
-    public void transformText(int position, int stage){
+
+    public void transformText(int position, int stage) {
         float size = base.output_progress_size();
         if (position == 0) {
 
@@ -243,19 +246,19 @@ public class Main7Activity extends AppCompatActivity {
     }
 
     public void onClick(View view) {
-        if (check_correctly){
+        if (check_correctly) {
             correctly.release();
             check_correctly = false;
         }
-        if (check_wrong){
+        if (check_wrong) {
             wrong.release();
             check_wrong = false;
         }
-        if (check_music_wrong){
+        if (check_music_wrong) {
             full_wrong.release();
             check_music_wrong = false;
         }
-        if (check_music_correctly){
+        if (check_music_correctly) {
             full_correctly.release();
             check_music_correctly = false;
         }
@@ -270,9 +273,9 @@ public class Main7Activity extends AppCompatActivity {
             correctly.start();
             check_correctly = true;
             check = true;
-        }else if (h.equals("")){
+        } else if (h.equals("")) {
             t.setText("Введите имя метода");
-        }else{
+        } else {
             t.setText("Неправильно");
             button.setBackgroundResource(R.drawable.wrong);
             wrong = MediaPlayer.create(this, R.raw.wrong);
@@ -310,8 +313,8 @@ public class Main7Activity extends AppCompatActivity {
             Intent intent = new Intent(this, method.class);
             startActivity(intent);
             finish();
-        }else{
-            if (check_music_wrong){
+        } else {
+            if (check_music_wrong) {
                 full_wrong.release();
                 check_music_wrong = false;
             }
@@ -323,63 +326,64 @@ public class Main7Activity extends AppCompatActivity {
             button.setBackgroundResource(R.drawable.full_wrong);
         }
     }
-    public void conclusion (boolean j, int r){
+
+    public void conclusion(boolean j, int r) {
         TextView x = (TextView) findViewById(R.id.textView8);
-        if (check_correctly){
+        if (check_correctly) {
             correctly.release();
             check_correctly = false;
         }
-        if (check_wrong){
+        if (check_wrong) {
             wrong.release();
             check_wrong = false;
         }
-        if (check_music_wrong){
+        if (check_music_wrong) {
             full_wrong.release();
 
             check_music_wrong = false;
         }
-        if (check_music_correctly){
+        if (check_music_correctly) {
             full_correctly.release();
             check_music_correctly = false;
         }
-        if (!check){
+        if (!check) {
             full_wrong = MediaPlayer.create(this, R.raw.full_wrong);
             full_wrong.start();
             check_music_wrong = true;
             x.setText("Вы не выполнили либо выполнили неправильно предыдущее задание");
-            if (r == 0){
+            if (r == 0) {
                 Button button = (Button) findViewById(R.id.button14);
                 button.setBackgroundResource(R.drawable.full_wrong);
-            }else if (r==1){
+            } else if (r == 1) {
                 Button button = (Button) findViewById(R.id.button16);
                 button.setBackgroundResource(R.drawable.full_wrong);
-            }else if (r==2){
+            } else if (r == 2) {
                 Button button = (Button) findViewById(R.id.button15);
                 button.setBackgroundResource(R.drawable.full_wrong);
-            }else if (r==3){
+            } else if (r == 3) {
                 Button button = (Button) findViewById(R.id.button13);
                 button.setBackgroundResource(R.drawable.full_wrong);
             }
-        }else {
-            if (r == 0){
+        } else {
+            if (r == 0) {
                 Button button = (Button) findViewById(R.id.button14);
                 button.setBackgroundResource(R.drawable.wrong);
                 wrong = MediaPlayer.create(this, R.raw.wrong);
                 check_wrong = true;
                 wrong.start();
-            }else if (r==1){
+            } else if (r == 1) {
                 Button button = (Button) findViewById(R.id.button16);
                 button.setBackgroundResource(R.drawable.wrong);
                 wrong = MediaPlayer.create(this, R.raw.wrong);
                 wrong.start();
                 check_wrong = true;
-            }else if (r==2){
+            } else if (r == 2) {
                 Button button = (Button) findViewById(R.id.button15);
                 button.setBackgroundResource(R.drawable.wrong);
                 wrong = MediaPlayer.create(this, R.raw.wrong);
                 wrong.start();
                 check_wrong = true;
-            }else if (r==3){
+            } else if (r == 3) {
                 Button button = (Button) findViewById(R.id.button13);
                 button.setBackgroundResource(R.drawable.correctly);
                 full_correctly = MediaPlayer.create(this, R.raw.vi_ka);
@@ -391,6 +395,7 @@ public class Main7Activity extends AppCompatActivity {
             check1 = j || check1;
         }
     }
+
     public void font(float number) {
         //base.input_progress_size((int) number);
         //base.input_window(6);
@@ -399,40 +404,42 @@ public class Main7Activity extends AppCompatActivity {
         //startActivity(intent);
         //finish();
         int size = (int) number;
-        if (size>=1){
+        if (size >= 1) {
             base.input_progress_size(size);
             transformText(old_page, 1);
             base.input_method_size(1);
             base.input_check_size_back(true);
         }
     }
+
     @Override
-    public boolean onCreateOptionsMenu (Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getSupportActionBar().setTitle("Первая программа");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#393837")));
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         switch (id) {
             case (R.id.item1):
-                if (check_correctly){
+                if (check_correctly) {
                     correctly.release();
                     check_correctly = false;
                 }
-                if (check_wrong){
+                if (check_wrong) {
                     wrong.release();
                     check_wrong = false;
                 }
-                if (check_music_wrong){
+                if (check_music_wrong) {
                     full_wrong.release();
 
                     check_music_wrong = false;
                 }
-                if (check_music_correctly){
+                if (check_music_correctly) {
                     full_correctly.release();
                     check_music_correctly = false;
                 }
@@ -456,7 +463,7 @@ public class Main7Activity extends AppCompatActivity {
                 final EditText userInput = (EditText) promptsView.findViewById(R.id.input_text);
                 float size = base.output_progress_size();
 
-                userInput.setTextSize(size-2.0f);
+                userInput.setTextSize(size - 2.0f);
                 ((TextView) promptsView.findViewById(R.id.text_dialog)).setTextSize(size - 1.0f);
                 //Настраиваем сообщение в диалоговом окне:
                 mDialogBuilder
@@ -495,21 +502,25 @@ public class Main7Activity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
     }
-    public void onBackPressed(){
-        if (check_music_correctly){
+
+    @Override
+    public void onBackPressed() {
+        if (check_music_correctly) {
             full_correctly.release();
         }
-        if (check_music_wrong){
+        if (check_music_wrong) {
             full_wrong.release();
         }
         back();
     }
-    private void back(){
+
+    private void back() {
         Intent intent = new Intent(this, Main5Activity.class);
         startActivity(intent);
         finish();

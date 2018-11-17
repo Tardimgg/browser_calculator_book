@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.example.myapplication.ScreenPager
-    xmlns:a="http://schemas.android.com/apk/res/android"
+<com.example.myapplication.ScreenPager xmlns:a="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     a:layout_width="match_parent"
     a:layout_height="match_parent"
-    a:id = "@+id/view6"
+    a:id="@+id/view6"
     tools:context="com.example.myapplication.Main6Activity">
+
     <ScrollView
         a:layout_width="match_parent"
         a:layout_height="match_parent"
         a:background="@color/colorBackground">
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="7dp"
             android:orientation="vertical"
             android:layout_marginRight="7dp"
             android:layout_marginTop="10dp"
-            android:id = "@+id/view6_0"
+            android:id="@+id/view6_0"
             android:background="@color/colorScroll">
 
             <TextView
@@ -47,16 +47,18 @@
 
         </LinearLayout>
     </ScrollView>
+
     <ScrollView
         a:layout_width="match_parent"
         a:layout_height="match_parent"
         a:background="@color/colorBackground">
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id = "@+id/view6_1">
+            android:id="@+id/view6_1">
+
             <TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
@@ -90,7 +92,7 @@
                 android:background="@drawable/back"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:onClick = "onClick1" />
+                android:onClick="onClick1" />
 
 
             <Button
@@ -99,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/view6_1_text2"
                 android:textSize="17sp"
-                android:onClick = "onClick3"
+                android:onClick="onClick3"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:background="@drawable/back" />
@@ -128,12 +130,13 @@
                 android:background="@drawable/back" />
         </LinearLayout>
     </ScrollView>
+
     <ScrollView
         a:layout_width="match_parent"
         a:layout_height="match_parent"
         a:background="@color/colorBackground">
-        <LinearLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="7dp"
@@ -141,7 +144,7 @@
             android:layout_marginRight="7dp"
             android:layout_marginTop="10dp"
             android:background="@color/colorScroll"
-            android:id = "@+id/view6_2">
+            android:id="@+id/view6_2">
 
             <TextView
                 android:id="@+id/textView4"
@@ -167,27 +170,30 @@
                 android:textSize="18sp" />
         </LinearLayout>
     </ScrollView>
-    <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/colorBackground">
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id = "@+id/q"
+            android:id="@+id/q"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_marginBottom="80dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="top"
                 android:id="@+id/view6_3">
+
                 <TextView
                     android:id="@+id/textView8"
                     android:layout_width="match_parent"
@@ -198,6 +204,7 @@
                     android:layout_gravity="center"
                     android:textSize="14sp"
                     android:text="" />
+
                 <TextView
 
                     android:id="@+id/textView17"
@@ -220,7 +227,7 @@
                     android:background="@drawable/back"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:onClick = "onClick5" />
+                    android:onClick="onClick5" />
 
 
                 <Button
@@ -229,7 +236,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/view6_3_text2"
                     android:textSize="17sp"
-                    android:onClick = "onClick6"
+                    android:onClick="onClick6"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:background="@drawable/back" />
@@ -258,17 +265,20 @@
 
             </LinearLayout>
         </ScrollView>
+
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:layout_marginBottom="1dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintBottom_toBottomOf="parent">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:id="@+id/view6_4">
+
                 <Button
                     android:id="@+id/button17"
                     android:layout_width="wrap_content"
@@ -280,7 +290,7 @@
                     android:text="@string/view_next"
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
-                    android:layout_marginBottom="7dp"/>
+                    android:layout_marginBottom="7dp" />
             </LinearLayout>
         </ScrollView>
     </android.support.constraint.ConstraintLayout>

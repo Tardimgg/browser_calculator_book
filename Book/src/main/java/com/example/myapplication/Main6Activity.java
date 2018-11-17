@@ -13,11 +13,13 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.view.menu.MenuAdapter;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
@@ -32,12 +34,13 @@ public class Main6Activity extends AppCompatActivity {
     private boolean check_music_correctly = false;
     private boolean check_wrong = false;
     private boolean check_correctly = false;
+    private boolean check_first_Tree_observer = false;
+    private boolean check_change_size_font = false;
     private int old_page;
     private MediaPlayer full_correctly;
     private MediaPlayer full_wrong;
     private MediaPlayer correctly;
     private MediaPlayer wrong;
-    Menu OldMenu = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +56,7 @@ public class Main6Activity extends AppCompatActivity {
         } else {
             setContentView(R.layout.activity_main6);
             base.input_check(false);
-            float size = base.output_progress_size();
+            final float size = base.output_progress_size();
             if (size != 18 && !base.output_progress_boolean()) {
                 //quitDialog.show();
                 LayoutInflater li = LayoutInflater.from(this);
@@ -81,6 +84,7 @@ public class Main6Activity extends AppCompatActivity {
                                             saved_box();
                                         } else {
                                             base.input_check(false);
+                                            onCreateOptionsMenu(null);
                                             float size = (float) base.output_progress_size();
                                             if (size != 0.0f) {
                                                 TextView q = (TextView) findViewById(R.id.textView1);
@@ -98,18 +102,34 @@ public class Main6Activity extends AppCompatActivity {
                                             base.input_check_box_size(true);
                                             saved_box();
                                         }
+                                        base.input_progress_size(18);
                                         dialog.cancel();
                                     }
                                 });
 
                 //и отображаем его:
                 mDialogBuilder.show();
-            } else if (size != 18 && !base.output_check_box_size()) {
-                base.input_check(false);
-            } else if (base.output_check_box_size()) {
-                base.input_check_box_size(false);
+            } else {
+                if (size != 18 && !base.output_check_box_size()) {
+                    base.input_check(false);
+                } else if (base.output_check_box_size()) {
+                    base.input_check_box_size(false);
+                }
+                ViewPager view = (ViewPager) findViewById(R.id.view6);
+                view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                    @Override
+                    public void onGlobalLayout() {
+                        if (!check_first_Tree_observer) {
+                            TextView q = (TextView) findViewById(R.id.textView1);
+                            TextView w = (TextView) findViewById(R.id.textView2);
+                            q.setTextSize(size + 7.0f);
+                            w.setTextSize(size);
+                            check_first_Tree_observer = true;
+                        }
+                    }
+                });
+                check_change_size_font = true;
             }
-
             ViewPager pager = (ViewPager) findViewById(R.id.view6);
             pager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
                 @Override
@@ -138,7 +158,6 @@ public class Main6Activity extends AppCompatActivity {
     }
 
     public void saved_box() {
-        base.input_window(5);
         base.input_progress_boolean(true);
         base.input_method_check_box(1);
         Intent intent = new Intent(this, method.class);
@@ -554,7 +573,6 @@ public class Main6Activity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        OldMenu = menu;
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         ScrollView scrollView = new ScrollView(this);
@@ -562,8 +580,10 @@ public class Main6Activity extends AppCompatActivity {
         TextView textView = new TextView(this);
         textView.setText("Введение");
         textView.setTextColor(getResources().getColor(R.color.colorwhite));
-        textView.setTextSize(base.output_progress_size() + 2);
+        textView.setTextSize(menu == null || check_change_size_font ? base.output_progress_size() + 2 : 20);
+        check_change_size_font = false;
         scrollView.addView(textView, params);
+        //menu.add(textView.getText()).setActionView(scrollView);
         getSupportActionBar().setCustomView(scrollView);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#393837")));
         if (menu != null) {
@@ -658,6 +678,7 @@ public class Main6Activity extends AppCompatActivity {
         return true;
     }
 
+    @Override
     public void onBackPressed() {
         if (check_music_correctly) {
             full_correctly.release();

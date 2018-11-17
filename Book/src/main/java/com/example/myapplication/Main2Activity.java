@@ -20,12 +20,15 @@ public class Main2Activity extends Activity {
         }
         x.setText(h);
     }
+
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
     }
+
+    @Override
     public void onBackPressed() {
-        Intent intent = new Intent (this, Main0Activity.class);
+        Intent intent = new Intent(this, Main0Activity.class);
         startActivity(intent);
         finish();
     }

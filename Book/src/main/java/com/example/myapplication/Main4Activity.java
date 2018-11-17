@@ -25,6 +25,7 @@ public class Main4Activity extends AppCompatActivity implements View.OnTouchList
     float first_x;
     float first_y;
     View r;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,11 +47,12 @@ public class Main4Activity extends AppCompatActivity implements View.OnTouchList
             x.setTransformationMethod(null);
         }
     }
+
     @Override
-    public boolean onTouch(View v, MotionEvent event){
+    public boolean onTouch(View v, MotionEvent event) {
         float x = event.getX();
         float y = event.getY();
-        switch (event.getAction()){
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:// нажатие
                 first_x = x;
                 first_y = y;
@@ -58,7 +60,7 @@ public class Main4Activity extends AppCompatActivity implements View.OnTouchList
             case MotionEvent.ACTION_MOVE: // движение
                 break;
             case MotionEvent.ACTION_UP: // отпускание
-                if (Math.abs(first_y - y)<=Math.abs(first_x - x) && first_x<x) {
+                if (Math.abs(first_y - y) <= Math.abs(first_x - x) && first_x < x) {
                     onBackPressed();
                 }
                 break;
@@ -72,7 +74,8 @@ public class Main4Activity extends AppCompatActivity implements View.OnTouchList
         finish();
         overridePendingTransition(R.anim.open, R.anim.exit);
     }
-    public void font(int progress){
+
+    public void font(int progress) {
         base.input_progress_size(progress);
         base.input_window(3);
         base.input_method_size(1);
@@ -80,23 +83,25 @@ public class Main4Activity extends AppCompatActivity implements View.OnTouchList
         startActivity(intent);
         finish();
     }
+
     @Override
-    public boolean onCreateOptionsMenu (Menu menu){
+    public boolean onCreateOptionsMenu(Menu menu) {
         getSupportActionBar().setTitle("Уроки");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#393837")));
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case R.id.item1 :
+        switch (item.getItemId()) {
+            case R.id.item1:
                 Uri address = Uri.parse("https://ru.stackoverflow.com/questions/ask");
                 Intent openlinkIntent = new Intent(Intent.ACTION_VIEW, address);
                 startActivity(openlinkIntent);
                 break;
-            case (R.id.item2) :
+            case (R.id.item2):
                 //Получаем вид с файла activity_dialog.xml, который применим для диалогового окна:
                 LayoutInflater li = LayoutInflater.from(this);
                 final View promptsView = li.inflate(R.layout.activity_dialog, null);
@@ -111,7 +116,7 @@ public class Main4Activity extends AppCompatActivity implements View.OnTouchList
                 final EditText userInput = (EditText) promptsView.findViewById(R.id.input_text);
                 float size = base.output_progress_size();
 
-                userInput.setTextSize(size-2.0f);
+                userInput.setTextSize(size - 2.0f);
                 ((TextView) promptsView.findViewById(R.id.text_dialog)).setTextSize(size - 1.0f);
                 //Настраиваем сообщение в диалоговом окне:
                 mDialogBuilder
@@ -142,7 +147,7 @@ public class Main4Activity extends AppCompatActivity implements View.OnTouchList
                 base.input_progress_size(18);
                 base.input_method_size(1);
                 base.input_window(3);
-                Intent intent = new Intent (this, method.class);
+                Intent intent = new Intent(this, method.class);
                 startActivity(intent);
                 finish();
                 break;
@@ -154,16 +159,20 @@ public class Main4Activity extends AppCompatActivity implements View.OnTouchList
         }
         return super.onOptionsItemSelected(item);
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
     }
-    public void onBackPressed(){
+
+    @Override
+    public void onBackPressed() {
         back();
     }
-    private void back(){
-        Intent intent = new Intent (this, Main3Activity.class);
+
+    private void back() {
+        Intent intent = new Intent(this, Main3Activity.class);
         startActivity(intent);
         finish();
     }

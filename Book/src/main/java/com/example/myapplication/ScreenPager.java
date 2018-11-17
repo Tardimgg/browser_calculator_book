@@ -15,6 +15,7 @@ public class ScreenPager extends ViewPager {
     private PagerAdapter adapter = new ScreenPagerAdapter();
     private List<View> viewList = new ArrayList<View>();
     private boolean enableSwipe = false;
+
     public ScreenPager(Context context) {
         super(context);
         init();

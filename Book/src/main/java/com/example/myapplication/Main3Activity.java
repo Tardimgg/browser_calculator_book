@@ -19,7 +19,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 
-public class Main3Activity extends Activity implements View.OnTouchListener{
+public class Main3Activity extends Activity implements View.OnTouchListener {
 
     private Button x0;
     private Button x;
@@ -58,7 +58,7 @@ public class Main3Activity extends Activity implements View.OnTouchListener{
             ImageView imageView = (ImageView) findViewById(R.id.imageView2);
             imageView.setOnTouchListener(this);
             final android.support.constraint.ConstraintLayout view = (android.support.constraint.ConstraintLayout) findViewById(R.id.view3);
-            view.getViewTreeObserver().addOnGlobalLayoutListener( new ViewTreeObserver.OnGlobalLayoutListener() {
+            view.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
                 @Override
                 public void onGlobalLayout() {
                     height_width = Math.max(Math.max(x0.getWidth(), x.getWidth()), x1.getWidth());
@@ -85,8 +85,8 @@ public class Main3Activity extends Activity implements View.OnTouchListener{
     }
 
     @Override
-    public boolean onTouch (View view, MotionEvent event){
-        switch (event.getAction()){
+    public boolean onTouch(View view, MotionEvent event) {
+        switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN: // нажатие
                 if (!check_touch) {
                     view.startAnimation(AnimationUtils.loadAnimation(this, R.anim.touch_button));
@@ -110,6 +110,7 @@ public class Main3Activity extends Activity implements View.OnTouchListener{
         return true;
 
     }
+
     public void onClick(View view) {
         Intent intent = new Intent(this, Main4Activity.class);
         startActivity(intent);
@@ -126,7 +127,7 @@ public class Main3Activity extends Activity implements View.OnTouchListener{
         //startActivity(intent);
     }
 
-
+    @Override
     public void onBackPressed() {
         back();
     }

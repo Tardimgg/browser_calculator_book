@@ -150,7 +150,7 @@ public class Main8Activity extends AppCompatActivity {
     }
 
     public void transformText(int position, int stage) {
-        float size = base.output_progress_size() ;
+        float size = base.output_progress_size();
         if (position == 0) {
 
             TextView text = (TextView) findViewById(R.id.textView1);
@@ -757,7 +757,7 @@ public class Main8Activity extends AppCompatActivity {
         //startActivity(intent);
         //finish();
         int size = (int) number;
-        if (size>=1){
+        if (size >= 1) {
             base.input_progress_size(size);
             transformText(old_page, 1);
             base.input_method_size(1);
@@ -807,7 +807,7 @@ public class Main8Activity extends AppCompatActivity {
                 final EditText userInput = (EditText) promptsView.findViewById(R.id.input_text);
                 float size = base.output_progress_size();
 
-                userInput.setTextSize(size-2.0f);
+                userInput.setTextSize(size - 2.0f);
                 ((TextView) promptsView.findViewById(R.id.text_dialog)).setTextSize(size - 1.0f);
                 //Настраиваем сообщение в диалоговом окне:
                 mDialogBuilder
@@ -853,6 +853,7 @@ public class Main8Activity extends AppCompatActivity {
         return true;
     }
 
+    @Override
     public void onBackPressed() {
         if (check_music_correctly) {
             full_correctly.release();

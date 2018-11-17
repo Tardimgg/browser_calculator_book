@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
     }
 
-   public void onClick(View view) {
+    public void onClick(View view) {
         TextView x = (TextView) findViewById(R.id.textView);
         x.setText(solve(7));
     }
@@ -167,9 +167,9 @@ public class MainActivity extends Activity {
                     if (w.equals(qwef) && !q.equals(qwef)) {
                         if (Float.parseFloat(h) > 0) {
                             answer = new BigDecimal("-100");
-                        } else if (Float.parseFloat(h) < 0){
+                        } else if (Float.parseFloat(h) < 0) {
                             answer = new BigDecimal("-99");
-                        }else{
+                        } else {
                             answer = qwef;
                         }
                     } else {
@@ -201,23 +201,23 @@ public class MainActivity extends Activity {
                 boolean rty = false;
                 int kol1 = 0;
                 String sd = "";
-                for (String i : vbn){
-                    if (i.equals(".")){
+                for (String i : vbn) {
+                    if (i.equals(".")) {
                         oop = true;
                         rty = true;
 
-                    }else if (oop){
-                        if (i.equals("0")){
+                    } else if (oop) {
+                        if (i.equals("0")) {
                             kol1++;
-                        }else{
+                        } else {
                             sd += rty ? "." : "";
                             rty = false;
                             sd += i;
-                            for (int l = 0 ; l <kol1 ; l++){
+                            for (int l = 0; l < kol1; l++) {
                                 sd += "0";
                             }
                         }
-                    }else{
+                    } else {
                         sd += i;
                     }
                 }
@@ -339,7 +339,7 @@ public class MainActivity extends Activity {
         }
         if (!t || base1.size() == 0) {
             r = (byte) kol;
-            t = base.size()>0;
+            t = base.size() > 0;
             String h = "";
             for (int i = 0; i < base.size(); i++) {
                 if (i < base.size()) {
@@ -356,7 +356,7 @@ public class MainActivity extends Activity {
                     }
                 }
             }
-            if (base.size() == 0 && kol == 3){
+            if (base.size() == 0 && kol == 3) {
                 base.add(-2);
             }
             answer = (h + jhk);
