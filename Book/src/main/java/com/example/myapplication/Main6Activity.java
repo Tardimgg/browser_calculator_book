@@ -13,7 +13,9 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.view.menu.MenuAdapter;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.style.AbsoluteSizeSpan;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -41,6 +43,7 @@ public class Main6Activity extends AppCompatActivity {
     private MediaPlayer full_wrong;
     private MediaPlayer correctly;
     private MediaPlayer wrong;
+    private Menu OldMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -573,25 +576,50 @@ public class Main6Activity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        ScrollView scrollView = new ScrollView(this);
-        ScrollView.LayoutParams params = new ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
-        TextView textView = new TextView(this);
-        textView.setText("Введение");
-        textView.setTextColor(getResources().getColor(R.color.colorwhite));
-        textView.setTextSize(menu == null || check_change_size_font ? base.output_progress_size() + 2 : 20);
-        check_change_size_font = false;
-        scrollView.addView(textView, params);
-        //menu.add(textView.getText()).setActionView(scrollView);
-        getSupportActionBar().setCustomView(scrollView);
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#393837")));
-        if (menu != null) {
-            getMenuInflater().inflate(R.menu.main, menu);
+        try {
+            getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            ScrollView scrollView = new ScrollView(this);
+            ScrollView.LayoutParams params = new ScrollView.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+            TextView textView = new TextView(this);
+            textView.setText("Введение");
+            textView.setTextColor(getResources().getColor(R.color.colorwhite));
+            textView.setTextSize(menu == null || check_change_size_font ? base.output_progress_size() + 2 : 20);
+            check_change_size_font = false;
+            scrollView.addView(textView, params);
+            getSupportActionBar().setCustomView(scrollView);
+            getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#393837")));
+            if (menu != null) {
+                getMenuInflater().inflate(R.menu.main, menu);
+                OldMenu = menu;
+            } else {
+                for (int i = 0; i<4; i++) {
+                    MenuItem item;
+                    switch (i) {
+                        case 0:
+                            item = OldMenu.findItem(R.id.item1);
+                            break;
+                        case 1:
+                            item = OldMenu.findItem(R.id.item2);
+                            break;
+                        case 2:
+                            item = OldMenu.findItem(R.id.item3);
+                            break;
+                        default:
+                            item = OldMenu.findItem(R.id.item4);
+                            break;
+                    }
+                    SpannableString spanString = new SpannableString(item.getTitle().toString());
+                    int end = spanString.length();
+                    spanString.setSpan(new AbsoluteSizeSpan(base.output_progress_size() - 2, true), 0, end, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+                    item.setTitle(spanString);
+                }
+            }
+            return true;
+        } catch (Exception e) {
+            return false;
         }
-        return true;
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();

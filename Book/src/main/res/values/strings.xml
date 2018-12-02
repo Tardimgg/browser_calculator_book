@@ -2,7 +2,7 @@
     <string name="app_name">Java Tutorial</string>
     <string name="menu_item1">Задать вопрос</string>
     <string name="menu_item2">Изменить размер шрифта</string>
-    <string name="menu_item3">Размер шрифта по умолчанию</string>
+    <string name="menu_item3">Размер шрифта\n по умолчанию</string>
     <string name="menu_item4">Документация (Английский)</string>
     <string name="view_next">Далее</string>
     <string name="answer_check">Проверить</string>
